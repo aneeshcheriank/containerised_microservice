@@ -13,3 +13,25 @@ containerise a micro service
 - <b>Infrastructure as Code</b> - Managing infrastructure like networking, compute, storage through machine-readable definition files rather than manual processes. Enables reproducibility.
 
 - <b></b>Distroless Container</b> - Optimized container image containing only an app, run-time language, and essential system libraries, omitting shells, package managers, etc. Improves security.
+
+## containerized microservice
+- ![alt text](images/image.png)
+
+## Containerized Countious Delivery
+![alt text](images/image_1.png)
+
+- push code to ECR
+    - create a new ECR
+    - open the new ECR
+    - commands are listed
+        - authenticate
+        - build the continer
+        - tag
+        - push
+
+- App Runner
+    - select the image and the tag (Latest)
+
+- AWS code build
+    - contious delivery (CI/CD pipeline for AWS)
+    - change in the GitHub reflected in AWS ECR
