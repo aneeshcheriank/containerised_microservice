@@ -8,9 +8,9 @@ test:
 	# --cov specify the root folder for 
 
 format:
-	black *.py ./nlplogic/*.py
+	black *.py
 
 lint:
-	pylint --disable=R,C *.py nlplogic/*.py
+	pylint --disable=R,C *.py
 
 all: install lint test
