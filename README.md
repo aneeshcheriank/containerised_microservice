@@ -41,3 +41,10 @@ containerise a micro service
 ## sample.py
 - simple function to add 2 numbers
 - FastAPI wrapped
+
+## ML model Containerized
+- ECR
+    - ECR login
+    - 
+- AWS app runner
+- 
