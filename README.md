@@ -20,6 +20,8 @@ containerise a micro service
 ## Containerized Countious Delivery
 ![alt text](images/image_1.png)
 
+
+## AWS Echosystem
 - push code to ECR
     - create a new ECR
     - open the new ECR
@@ -35,3 +37,7 @@ containerise a micro service
 - AWS code build
     - contious delivery (CI/CD pipeline for AWS)
     - change in the GitHub reflected in AWS ECR
+
+## sample.py
+- simple function to add 2 numbers
+- FastAPI wrapped
