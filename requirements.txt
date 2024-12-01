@@ -4,3 +4,6 @@ black
 lint
 pytest
 pytest--cov
+transformers
+torch
+gliner
