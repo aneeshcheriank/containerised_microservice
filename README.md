@@ -43,9 +43,22 @@ containerise a micro service
 - FastAPI wrapped
 
 ## ML model Containerized
+- Cloud9
+    - clone the repo
+    - push the image to ECR
+    - commands will be given when create a new ECR to push the image
 - ECR
     - ECR login
     - tag the image
     - push the image 
 - AWS app runner
-- 
+    - 
+
+## Architecture
+    - platforms
+        - model
+        - data
+        - notebooks
+    - model (containerize)-> ECR -> appRunner (Microservice)
+
+- ![alt text](images/image_2.png)
