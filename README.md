@@ -45,6 +45,7 @@ containerise a micro service
 ## ML model Containerized
 - ECR
     - ECR login
-    - 
+    - tag the image
+    - push the image 
 - AWS app runner
 - 
