@@ -43,8 +43,9 @@ ENT_LABELS = [
     "state",
     "swift_bic",
     "cvv",
-    "pin"
+    "pin",
 ]
+
 
 def summarizer(text):
     pipe = pipeline(
@@ -53,19 +54,20 @@ def summarizer(text):
     summary = pipe(text)[0]["summary_text"]
     return {"summary": summary}
 
+
 def entity_extractor(text, labels=ENT_LABELS):
     model = GLiNER.from_pretrained("gretelai/gretel-gliner-bi-small-v1.0")
     entities = model.predict_entities(text, labels, threshold=0.7)
-    
+
     # Display the detected entities
     ents = {}
     for entity in entities:
-        if entity['label'] not in ents:
-            key = entity['label']
+        if entity["label"] not in ents:
+            key = entity["label"]
             ents[key] = []
             ents[key].append(entity)
         else:
-            ents[entity['label']].append(entity)
+            ents[entity["label"]].append(entity)
     return ents
 
 
