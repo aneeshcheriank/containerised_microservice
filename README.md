@@ -1,6 +1,6 @@
 # containerised_microservice
-containerise a micro service
-[![Python application test with GitHub Actions](https://github.com/aneeshcheriank/containerised_microservice/actions/workflows/makefile.yml/badge.svg)](https://github.com/aneeshcheriank/containerised_microservice/actions/workflows/makefile.yml)
+- containerise a micro service
+- [![Python application test with GitHub Actions](https://github.com/aneeshcheriank/containerised_microservice/actions/workflows/makefile.yml/badge.svg)](https://github.com/aneeshcheriank/containerised_microservice/actions/workflows/makefile.yml)
 
 ## Key Terms
 - <b>Container</b> - A standardized, lightweight software package that bundles together an application's code and dependencies to run reliably in any environment.
