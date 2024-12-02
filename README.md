@@ -1,6 +1,5 @@
 # containerised_microservice
-- containerise a micro service
-- [![Python application test with GitHub Actions](https://github.com/aneeshcheriank/containerised_microservice/actions/workflows/makefile.yml/badge.svg)](https://github.com/aneeshcheriank/containerised_microservice/actions/workflows/makefile.yml)
+containerise a micro service
 
 ## Key Terms
 - <b>Container</b> - A standardized, lightweight software package that bundles together an application's code and dependencies to run reliably in any environment.
@@ -63,6 +62,12 @@
     - model (containerize)-> ECR -> appRunner (Microservice)
 
 - ![alt text](images/image_2.png)
+
+## Docker commands
+- `docker build . -t <tag_name>`
+- `docker image ls # list the docker ids`
+- `docker run -p 127.0.0.1:8080:8080 <image_id> `
+- to remove a docker image `docker rmi <image_id>`
 
 ## Dustiriless Containers
 - small images size (docker image)
