@@ -1,4 +1,4 @@
-FROM public.ecr.aws/lambda/python:3.8
+FROM FROM python:3.8-slim-bullseye
 
 # create an app directory in the container
 RUN mkdir -p /app
