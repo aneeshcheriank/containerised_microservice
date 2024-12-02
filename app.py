@@ -11,14 +11,14 @@ async def root():
     return {"message": "Hello World"}
 
 
-@app.get("/summary")
-async def summry(text):
-    pass
+@app.get("/summary/{text}")
+async def summry(text: str):
+    return summarizer(text=text)
 
 
-@app.get("/ner")
-async def ner(text):
-    pass
+@app.get("/ner/{text}")
+async def ner(text: str):
+    return entity_extractor(text=text)
 
 
 if __name__ == "__main__":

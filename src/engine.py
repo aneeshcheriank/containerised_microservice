@@ -47,39 +47,38 @@ ENT_LABELS = [
 ]
 
 
-def summarizer(text):
+def summarizer(text, max_length=142):
+    """
+    Summarizes the input text using the Transformers pipeline.
+    Args:
+        text (str): Input text to summarize.
+        max_length (int): Maximum length of the summary.
+    Returns:
+        dict: Summary text as a dictionary.
+    """
     pipe = pipeline(
         task="summarization", model="sshleifer/distilbart-cnn-12-6", revision="a4f8f3e"
     )
-    summary = pipe(text)[0]["summary_text"]
+    summary = pipe(text, max_length=max_length)[0]["summary_text"]
     return {"summary": summary}
 
 
 def entity_extractor(text, labels=ENT_LABELS):
+    """
+    Extracts entities from the input text using GLiNER.
+    Args:
+        text (str): Input text for entity extraction.
+        labels (list): List of entity labels to detect.
+    Returns:
+        dict: Extracted entities grouped by their label.
+    """
     model = GLiNER.from_pretrained("gretelai/gretel-gliner-bi-small-v1.0")
     entities = model.predict_entities(text, labels, threshold=0.7)
 
-    # Display the detected entities
     ents = {}
     for entity in entities:
-        if entity["label"] not in ents:
-            key = entity["label"]
-            ents[key] = []
-            ents[key].append(entity)
-        else:
-            ents[entity["label"]].append(entity)
+        label = entity["label"]
+        if label not in ents:
+            ents[label] = []
+        ents[label].append(entity)
     return ents
-
-
-if __name__ == "__main__":
-    text = """
-Purchase Order
-----------------
-Date: 10/05/2023
-----------------
-Customer Name: CID-982305
-Billing Address: 1234 Oak Street, Suite 400, Springfield, IL, 62704
-Phone: (312) 555-7890 (555-876-5432)
-Email: janedoe@company.com
-"""
-    print(entity_extractor(text))
