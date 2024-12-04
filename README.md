@@ -104,3 +104,53 @@ containerise a micro service
 3. Deploy a container to a Kubernetes cluster
 4. Write Terraform configs to spin up container infrastructure
 5. Compare size and security of distroless vs regular containers
+
+# Placeholder
+
+## Key Terms
+- <b>AI Pair Programming</b> - Collaborative software development between a human and an AI assistant that suggests code interactively.
+- <b>GitHub Copilot</b> - An AI programming tool from GitHub that provides context-aware code suggestions and entire functions in real-time as developers type.
+- <b>Code Whisperer</b> - Amazon's intelligent coding assistant for suggest code snippets and documentation powered by CodeGuru and GPT-3. Still in preview.
+- <b>OpenAI Codex</b> - AI system from OpenAI trained on code to translate natural language to code and suggest possibilities programmed by humans.
+- <b>Responsible AI</b> - Developing and deploying AI that respects human rights and democratic values like transparency, privacy, non-discrimination and accountability.
+
+## AI Programmer workflow
+- ![alt text](images/image_3.png)
+- AI help programmer to code faster
+
+## Python DevOps with Copilot
+- Git repo
+- Git code space
+    - customization
+        - machine selection
+        - add extentions
+            - Copilot
+        - devcontainers.json
+            - customization file
+    - Files
+        - Makefile
+            - install
+            - lint
+            - format
+            - deploy
+            - all
+        - requirements.txt
+            - pinned requirements
+    - virtual environment
+        - `python -m venv .venv`
+        - `source .venv/bin/activate`
+        - `deactivate`
+    - install ipython outside the requirements
+        - not needed for deployment
+    - ipdb for interactive debugging
+        - `import ipdb; ipd.set_trace()`
+
+## Countinous Integration
+    - Git(code) --> Development envrionment
+    - need a feedback loop, the code is working
+    - github actions
+
+## Project building steps
+- create a lib (logic in library)
+- wrap the function in a cli, if the cli is working
+- create a web app
