@@ -3,7 +3,7 @@ install:
 		pip install -r requirements.txt
 
 test:
-	python -m pytest -vv --cov=src test/test_engine.py
+	python -m pytest -vv --cov=src test/test_*.py
 	# --cov specify the root folder for 
 
 format:
