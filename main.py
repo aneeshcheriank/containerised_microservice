@@ -12,14 +12,14 @@ def cli():
 @cli.command("summarize")
 @click.argument("text")
 def summurize(text):
-    """usage: ./main.py summarize 'Text' """
+    """usage: ./main.py summarize 'Text'"""
     summarizer(text=text)
 
 
 @cli.command("ner")
 @click.argument("text")
 def ner(text):
-    """usage: ./main.py ner 'Text' """
+    """usage: ./main.py ner 'Text'"""
     entity_extractor(text=text)
 
 

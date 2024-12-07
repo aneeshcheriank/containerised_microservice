@@ -5,11 +5,12 @@ install:
 		pip install -r requirements.txt
 
 test:
-	python -m pytest -vv --cov=src --cov=main --cov=app test/test_*.py
+	python -m pytest -vv --cov=src --cov=main \
+	--cov=app test/test_*.py
 	# --cov specify the root folder for 
 
 format:
-	black *.py src/*.py
+	black *.py src/*.py test/*.py
 
 lint:
 	pylint --disable=R,C *.py
