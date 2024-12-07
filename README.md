@@ -154,3 +154,20 @@ containerise a micro service
 - create a lib (logic in library)
 - wrap the function in a cli, if the cli is working
 - create a web app
+
+### Project diagram (FastAPI)
+![alt text](image.png)
+
+### Continerized Contious Delivery of FastAPI
+![alt text](image-1.png)
+
+
+### buildspec.yml
+- ```
+version: 0.2
+
+phases:
+    build:
+        commnads:
+            - make all
+```
