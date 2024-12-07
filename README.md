@@ -156,14 +156,14 @@ containerise a micro service
 - create a web app
 
 ### Project diagram (FastAPI)
-![alt text](image.png)
+![alt text](images/image_4.png)
 
 ### Continerized Contious Delivery of FastAPI
-![alt text](image-1.png)
+![alt text](images/image_5.png)
 
 
 ### buildspec.yml
-- ```
+```
 version: 0.2
 
 phases:
@@ -171,3 +171,6 @@ phases:
         commnads:
             - make all
 ```
+- AWS build system
+    - to deploy changes in the git to app
+    - poin to the buildsepc.yml
